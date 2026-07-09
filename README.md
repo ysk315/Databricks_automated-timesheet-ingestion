@@ -8,18 +8,23 @@ Project Overview
 Key Features
 
 Multi-format Conversion:
-> Converts PDF timesheets into CSV, JSON, and XML formats.
+>Converts PDF timesheets into CSV, JSON, and XML formats.
+
 Automated Metadata Tracking:
 >Maintains a metadata table to track which PDF files have been processed and which are pending.
+
 Date Extraction:
 >Parses date information directly from source PDF filenames to generate target file names.
+
 Layered Data Architecture:
 Bronze Layer:
->  Raw data loaded as-is from source files for auditability.
+>Raw data loaded as-is from source files for auditability.
+
 Silver Layer:
-> Data cleansing and standardization (e.g., converting NULL values to -1), with data quality expectations. Bad records are isolated into a separate Silver error table.
+>Data cleansing and standardization (e.g., converting NULL values to -1), with data quality expectations. Bad records are isolated into a separate Silver error table.
+
 Gold Layer:
-> Aggregated business-ready tables:
+>Aggregated business-ready tables:
 >Monthly aggregated data
 >Yearly aggregated data
 
