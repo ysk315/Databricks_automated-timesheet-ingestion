@@ -4,7 +4,7 @@ Scalable PDF timesheet ETL pipeline with metadata tracking, data quality enforce
 
 Project Overview
 
-This project automates the ingestion and processing of employee timesheet PDF files into a structured data pipeline using Medallion Architecture (Bronze → Silver → Gold).
+>This project automates the ingestion and processing of employee timesheet PDF files into a structured data pipeline using Medallion Architecture (Bronze → Silver → Gold).
 Key Features
 
 Multi-format Conversion: Converts PDF timesheets into CSV, JSON, and XML formats.
