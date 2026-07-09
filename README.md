@@ -37,4 +37,17 @@ Architecture Highlights
 >Date components are extracted from filenames for consistent target file naming.
 >Robust error handling and data quality framework in the Silver layer.
 >Designed for scalability and audit compliance.
+>
+>## Architecture
+
+```mermaid
+flowchart TD
+    A[Source PDF Timesheets are uploaded into a volume] 
+    --> B[PDF Parser & Converter created falt files]
+    B --> C[CSV / JSON / XML Files are created in sepearte volume]
+    C --> D[Metadata Table is updated to track pdf processing file status]
+    D --> E[Bronze Layer - Raw Load - data is laoded as is from falt files using autoloader]
+    E --> F[Silver Layer - Cleansing- Data is curated and handled expectations]
+    F --> G[Gold Layer - Aggregates -aggregate tables are loaded ]
+    G --> H[Dashboards  to track employee hours worked]
 
